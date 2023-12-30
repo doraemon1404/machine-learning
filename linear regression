@@ -1,0 +1,50 @@
+# code for linear regression
+# https://youtu.be/P8hT5nDai6A, Please efer this video before proceeding further.
+# the goal is to form a function which takes in values of 'x' and 'y' from previous data-set
+# finds the closest values of 'm' and 'c' => ('m'=slope) , ('c'= y intercept)
+# and hence provides any future values of 'y' for any 'x' via the equation 'y = m*x + c'
+# here 'n' will be the number of values/inputs,outputs that we have.
+# in this case 'n'=7
+
+l1=[1,2,3,4,5,6,7]
+l2=[1.5,3.8,6.7,9.0,11.2,13.6,16]
+
+#sum(xy)
+sum=0
+for i in range(len(l1)):
+  a=l1[i]*l2[i]
+  sum=sum+a
+print("sum of xy: ",sum)
+
+#sum(x**2)
+sum1=0
+for i in range(len(l1)):
+  b=l1[i]*l1[i]
+  sum1=sum1+b
+print("sum of x**2: ",sum1)
+
+#sum(y)
+sum2=0
+for i in range(len(l2)):
+  sum2=sum2+l2[i]
+print("sum of y: ",sum2)
+
+#sum(x)
+sum3=0
+for i in range(len(l1)):
+  sum3=sum3+l1[i]
+print("sum of x: ",sum3)
+
+#n
+n=len(l1)
+print("count: ",n)
+
+#slope and intercept
+m=(n*sum - (sum3*sum2))/(n*sum1 - sum3**2)
+intercept=(sum2-m*sum3)/n
+print("slope: ",m)
+print("intercept: ",intercept)
+
+#final equation
+print(f"\nthe equation is: ")
+print(f"\ny = {m} x + {intercept}")
