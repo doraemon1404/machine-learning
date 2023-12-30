@@ -5,6 +5,7 @@
 # and hence provides any future values of 'y' for any 'x' via the equation 'y = m*x + c'
 # here 'n' will be the number of values/inputs,outputs that we have.
 # in this case 'n'=7
+# created on 24 november 2023 in semester 1
 
 l1=[1,2,3,4,5,6,7]
 l2=[1.5,3.8,6.7,9.0,11.2,13.6,16]
